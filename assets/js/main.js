@@ -1,4 +1,4 @@
-import { subscribeToHellfireClub } from "./firebase/hellfire-club.js";
+import { getHellfireClubSubscriptions, subscribeToHellfireClub } from "./firebase/hellfire-club.js";
 
     const txtName = document.getElementById('txtName')
     const txtEmail = document.getElementById('txtEmail')
@@ -23,3 +23,10 @@ import { subscribeToHellfireClub } from "./firebase/hellfire-club.js";
          txtCharacter.value = ''
 
     })
+
+    async function loadData(){
+        const subscription = await getHellfireClubSubscriptions();
+        console.log(subscription)
+    }
+
+    loadData();
