@@ -15,12 +15,14 @@ import { getHellfireClubSubscriptions, subscribeToHellfireClub } from "./firebas
             character: txtCharacter.value
         }
         const subscriptionId = await subscribeToHellfireClub(subscription)
-        console.log(`Inscrito com sucesso: ${subscriptionId}`)
+      
         
          txtName.value = ''
          txtEmail.value = ''
          txtLevel.value = ''
          txtCharacter.value = ''
+
+         alert(`Inscrito com sucesso: ${subscriptionId}`)
 
     })
 
